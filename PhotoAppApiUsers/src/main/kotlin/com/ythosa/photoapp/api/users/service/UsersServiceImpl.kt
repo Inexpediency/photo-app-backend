@@ -10,10 +10,9 @@ import java.util.*
 class UsersServiceImpl(private val usersRepository: UsersRepository) : UsersService {
     override fun createUser(userDetails: UserDto): UserDto {
         userDetails.userId = UUID.randomUUID().toString()
+        userDetails.encryptedPassword = "12345"
 
-        val userEntity = UserEntity.ModelMapper.from(userDetails)
-        userEntity.encryptedPassword = "12345"
-        usersRepository.save(userEntity)
+        usersRepository.save(UserEntity.ModelMapper.from(userDetails))
 
         return userDetails
     }
