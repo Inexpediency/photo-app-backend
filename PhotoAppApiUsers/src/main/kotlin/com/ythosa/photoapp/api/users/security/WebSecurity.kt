@@ -11,6 +11,15 @@ class WebSecurity : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity) {
         http.csrf().disable()
         http.authorizeRequests().antMatchers("/users/**").permitAll()
+            .and()
+            .addFilter(getAuthenticationFilter())
         http.headers().frameOptions().disable()
+    }
+
+    private fun getAuthenticationFilter(): AuthenticationFilter {
+        val authenticationFilter = AuthenticationFilter()
+        authenticationFilter.setAuthenticationManager(authenticationManager())
+
+        return authenticationFilter
     }
 }
