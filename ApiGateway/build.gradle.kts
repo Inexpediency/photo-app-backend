@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.5.3"
+    id("org.springframework.boot") version "2.5.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
@@ -23,7 +23,8 @@ dependencies {
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
     implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
-    implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp")
+    implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp:2.2.1.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.2.6.RELEASE")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")

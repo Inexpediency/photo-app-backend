@@ -46,6 +46,8 @@ class AuthorizationHeaderFilter(
     private fun isJwtValid(jwtToken: String): Boolean {
         val subject: String?
 
+        println("signing key: " + authorizationHeaderFilterProps.accessTokenSecret)
+
         try {
             subject = Jwts.parser()
                 .setSigningKey(authorizationHeaderFilterProps.accessTokenSecret)

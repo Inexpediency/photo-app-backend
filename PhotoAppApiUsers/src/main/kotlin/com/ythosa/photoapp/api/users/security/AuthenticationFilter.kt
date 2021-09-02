@@ -50,5 +50,7 @@ class AuthenticationFilter(
 
         response.addHeader("access-token", accessToken)
         response.addHeader("refresh-token", refreshToken)
+
+        println("signing key: " + authenticationProps.accessTokenSecret)
     }
 }

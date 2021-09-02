@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.5.3"
+    id("org.springframework.boot") version "2.5.4"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.21"
     kotlin("plugin.spring") version "1.5.21"
@@ -22,7 +22,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.cloud:spring-cloud-starter-config")
-    implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp")
+    implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp:2.2.1.RELEASE")
+    implementation("org.springframework.boot:spring-boot-starter-actuator:2.2.6.RELEASE")
     implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")

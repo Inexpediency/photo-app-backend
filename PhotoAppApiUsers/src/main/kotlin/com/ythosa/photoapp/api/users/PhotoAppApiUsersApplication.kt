@@ -5,12 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
+import org.springframework.cloud.context.config.annotation.RefreshScope
 import org.springframework.context.annotation.Bean
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@RefreshScope
 @EnableConfigurationProperties(AuthenticationProps::class)
 class PhotoAppApiUsersApplication {
     @Bean

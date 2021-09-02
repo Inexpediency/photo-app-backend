@@ -23,6 +23,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-config-server")
     implementation("org.springframework.cloud:spring-cloud-starter-bus-amqp")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.cloud:spring-cloud-config-monitor:2.2.2.RELEASE")
+    implementation("org.springframework.cloud:spring-cloud-starter-stream-rabbit:3.0.4.RELEASE")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
